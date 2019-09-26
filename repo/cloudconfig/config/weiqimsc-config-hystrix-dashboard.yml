@@ -1,0 +1,33 @@
+spring:
+  profiles:
+    active:
+    - dev   
+---
+spring: 
+  profiles: dev
+  application:
+    name: weiqimsc-hystrix-dashboard
+server:
+  port: 9001
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+       defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: weiqimsc-hystrix-dashboard
+    prefer-ip-address: true  
+
+---
+spring: 
+  profiles: tech
+  application:
+    name: weiqimsc-hystrix-dashboard
+server:
+  port: 9001
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+       defaultZone: http://localhost:7001/eureka/
+  instance:
+    instance-id: weiqimsc-hystrix-dashboard
+    prefer-ip-address: true  
