@@ -1,0 +1,9 @@
+spring:
+  cloud:
+    config:
+      name: weiqimsc-config-provider
+      #label: config
+      profile: dev   #本次访问的配置项
+      uri: http://localhost:3344/weiqimsc-config
+
+

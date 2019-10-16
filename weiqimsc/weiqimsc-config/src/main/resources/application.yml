@@ -1,0 +1,29 @@
+server: 
+  port: 3344 
+  context-path: /weiqimsc-config
+  
+spring:
+  application:
+    name:  weiqimsc-config
+  profiles:
+    active: subversion
+  cloud:
+    config:
+      server:
+        svn:
+          uri: svn://192.168.45.32/pos/weiqi/repo/cloudconfig
+          username: juqi
+          password: juqi
+          default-label: config
+
+#spring:
+#  application:
+#    name:  weiqimsc-config
+#  cloud:
+#    config:
+#      server:
+#        git:
+#          #uri: git@github.com:juqi87/weiqi.git #GitHub上面的git仓库名字
+#          uri: https://github.com/juqi87/weiqi.git
+#          search-paths: /repo/cloudconfig/config
+

@@ -1,0 +1,42 @@
+server:
+  port: 8002
+  
+mybatis:
+  config-location: classpath:mybatis/mybatis.cfg.xml
+  type-aliases-package: com.monster.weiqimsc.model
+  mapper-locations:
+  - classpath:mybatis/mapper/**/*.xml
+    
+spring: 
+  #profiles: dev
+  application:
+    name: weiqimsc-provider 
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource            
+    driver-class-name: org.gjt.mm.mysql.Driver              
+    url: jdbc:mysql://192.168.45.33:3306/weiqi             
+    username: weiqi
+    password: weiqi.db
+    dbcp2:
+      min-idle: 5                                           
+      initial-size: 5                                       
+      max-total: 5                                         
+      max-wait-millis: 200 
+      
+eureka:
+  client: #客户端注册进eureka服务列表内
+    service-url: 
+       defaultZone: http://eureka7001.com:7001/eureka/,http://eureka7002.com:7002/eureka/
+  instance:
+    instance-id: weiqimsc-provider-8002
+    prefer-ip-address: true       
+      
+info: 
+  app.name: weiqimsc-provider
+  company.name: www.dingshuapay.com
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
+      
+      
+      
+

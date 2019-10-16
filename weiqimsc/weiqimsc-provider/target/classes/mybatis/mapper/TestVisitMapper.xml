@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.monster.weiqimsc.provider.dao.TestVisitMapper" >
+ 
+  
+  <select id="getTestVisit" resultType="String" >
+    select 
+  		 STAT
+    from DB_STAT
+  </select>
+  
+</mapper>
