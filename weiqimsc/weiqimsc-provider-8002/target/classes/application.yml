@@ -10,7 +10,11 @@ mybatis:
 spring: 
   #profiles: dev
   application:
-    name: weiqimsc-provider 
+    name: weiqimsc-provider
+  zipkin:
+    base-url: http://127.0.0.1:9107
+  sleuth:
+    sampler.percentage: 1 
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource            
     driver-class-name: org.gjt.mm.mysql.Driver              

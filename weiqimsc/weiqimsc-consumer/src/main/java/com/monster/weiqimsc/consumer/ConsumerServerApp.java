@@ -23,7 +23,7 @@ import com.monster.weiqimsc.consumer.myrule.MySelfRule;
 @SpringBootApplication
 @EnableEurekaClient
 @EnableDiscoveryClient
-@RibbonClient(name="WEIQIMSC-PROVIDER",configuration=MySelfRule.class)
+//@RibbonClient(name="WEIQIMSC-PROVIDER",configuration=MySelfRule.class)
 @EnableFeignClients(basePackages= {"com.monster.weiqimsc"})
 @ComponentScan("com.monster.weiqimsc")
 public class ConsumerServerApp {

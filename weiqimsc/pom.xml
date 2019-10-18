@@ -82,5 +82,6 @@
 		<module>weiqimsc-consumer</module>
 		<module>weiqimsc-provider-8002</module>
 		<module>weiqimsc-zuul-gateway</module>
+		<module>weiqimsc-zipkin-server</module>
 	</modules>
 </project>

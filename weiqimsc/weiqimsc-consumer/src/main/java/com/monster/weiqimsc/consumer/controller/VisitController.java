@@ -5,6 +5,7 @@
  */
 package com.monster.weiqimsc.consumer.controller;
 
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,6 +20,8 @@ import com.monster.weiqimsc.client.TestClient;
  */
 @RestController
 public class VisitController {
+    
+    private Logger logger = Logger.getLogger(VisitController.class);
 
     private static final String REST_URL_PREFIX = "http://WEIQIMSC-PROVIDER";
     
@@ -34,11 +37,13 @@ public class VisitController {
     
     @RequestMapping(value = "/consumer/visit")
     public String visit() {
+        logger.info("进入/consumer/visit");
         return restTemplate.postForObject(REST_URL_PREFIX + "/visitWebDb.jsp", null, String.class);
     }
     
     @RequestMapping(value = "/consumer/ribbonVisit")
     public String ribbonVisit() {
+        logger.info("进入/consumer/ribbonVisit");
         return testClient.visitWebDb();
     }
 }

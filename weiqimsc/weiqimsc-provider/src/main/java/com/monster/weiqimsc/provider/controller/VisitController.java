@@ -7,15 +7,12 @@ package com.monster.weiqimsc.provider.controller;
 
 import java.time.LocalDate;
 
-import javax.servlet.http.HttpServletRequest;
-
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.monster.weiqimsc.provider.dao.TestVisitMapper;
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 
 /**
  * 
@@ -24,6 +21,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
  */
 @RestController
 public class VisitController {
+    
+    private Logger logger = Logger.getLogger(VisitController.class);
 
     @Autowired
     private TestVisitMapper testVisitMapper;

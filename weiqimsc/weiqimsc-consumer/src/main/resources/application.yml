@@ -4,6 +4,10 @@ server:
 spring:
   application:
     name: weiqimsc-consumer
+  zipkin:
+    base-url: http://127.0.0.1:9107
+  sleuth:
+    sampler.percentage: 1
   
 eureka:
   client:
